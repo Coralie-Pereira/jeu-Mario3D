@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class healthSysteme : MonoBehaviour
+public class HealthSystem : MonoBehaviour
 {
 
     [SerializeField] Sprite fullHeart, emptyHeart;
@@ -35,11 +35,11 @@ public class healthSysteme : MonoBehaviour
              break;
 
         
-            case 1:
-                life3.sprite = emptyHeart;
-                life2.sprite = emptyHeart;
-                life1.sprite = fullHeart;
-             break;
+            case 1: 
+            life3.sprite = emptyHeart;
+            life2.sprite = emptyHeart;
+            life1.sprite = fullHeart;
+         break;
 
             case 0:
                 life3.sprite = emptyHeart;
