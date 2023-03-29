@@ -514,14 +514,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914969831}
-  m_LocalRotation: {x: 0.55581427, y: 0.18219711, z: -0.1832337, w: 0.7901267}
-  m_LocalPosition: {x: -13, y: 48.8, z: -4.1}
+  m_LocalRotation: {x: 0.001822263, y: 0.8924657, z: -0.45050055, w: 0.023473114}
+  m_LocalPosition: {x: -0, y: 39.1, z: 24.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 997229508}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 70.926, y: 14.936, z: -15.443}
+  m_LocalEulerAnglesHint: {x: 53.533, y: 176.116, z: -1.725}
 --- !u!82 &914969835
 AudioSource:
   m_ObjectHideFlags: 0
@@ -662,12 +662,28 @@ PrefabInstance:
       value: MarioWithCappy
       objectReference: {fileID: 0}
     - target: {fileID: 2555255827801972511, guid: ba419ed4dac03e44d812b88f5e4f18c6, type: 3}
+      propertyPath: jumpSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2555255827801972511, guid: ba419ed4dac03e44d812b88f5e4f18c6, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2555255827801972511, guid: ba419ed4dac03e44d812b88f5e4f18c6, type: 3}
+      propertyPath: jumpHeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2555255827801972511, guid: ba419ed4dac03e44d812b88f5e4f18c6, type: 3}
       propertyPath: currentHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2555255827801972511, guid: ba419ed4dac03e44d812b88f5e4f18c6, type: 3}
+      propertyPath: rotationSpeed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2555255827801972511, guid: ba419ed4dac03e44d812b88f5e4f18c6, type: 3}
+      propertyPath: verticalSpeed
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2555255827801972511, guid: ba419ed4dac03e44d812b88f5e4f18c6, type: 3}
       propertyPath: groundLayer.m_Bits
@@ -691,7 +707,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5735932501617902388, guid: ba419ed4dac03e44d812b88f5e4f18c6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8743567
+      value: 0.7481433
       objectReference: {fileID: 0}
     - target: {fileID: 5735932501617902388, guid: ba419ed4dac03e44d812b88f5e4f18c6, type: 3}
       propertyPath: m_LocalRotation.x
@@ -699,7 +715,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5735932501617902388, guid: ba419ed4dac03e44d812b88f5e4f18c6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.48528397
+      value: -0.66353714
       objectReference: {fileID: 0}
     - target: {fileID: 5735932501617902388, guid: ba419ed4dac03e44d812b88f5e4f18c6, type: 3}
       propertyPath: m_LocalRotation.z
@@ -711,7 +727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5735932501617902388, guid: ba419ed4dac03e44d812b88f5e4f18c6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 58.062
+      value: -83.14
       objectReference: {fileID: 0}
     - target: {fileID: 5735932501617902388, guid: ba419ed4dac03e44d812b88f5e4f18c6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1291,6 +1307,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.9
       objectReference: {fileID: 0}
+    - target: {fileID: 871691285737107350, guid: b450c55d8513b484eaef705b89e0cdde, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 1621032194497010940, guid: b450c55d8513b484eaef705b89e0cdde, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.01
@@ -1298,6 +1318,22 @@ PrefabInstance:
     - target: {fileID: 1621032194497010940, guid: b450c55d8513b484eaef705b89e0cdde, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 1683680378635094840, guid: b450c55d8513b484eaef705b89e0cdde, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617742694324098613, guid: b450c55d8513b484eaef705b89e0cdde, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927501863472818943, guid: b450c55d8513b484eaef705b89e0cdde, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 3723988359760167249, guid: b450c55d8513b484eaef705b89e0cdde, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4588839032269550129, guid: b450c55d8513b484eaef705b89e0cdde, type: 3}
       propertyPath: m_RootOrder
@@ -1346,6 +1382,38 @@ PrefabInstance:
     - target: {fileID: 4848933267447373779, guid: b450c55d8513b484eaef705b89e0cdde, type: 3}
       propertyPath: m_Name
       value: super_mario_level_stefan_blasko
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848933267447373779, guid: b450c55d8513b484eaef705b89e0cdde, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947588107635350271, guid: b450c55d8513b484eaef705b89e0cdde, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 6578551214256906740, guid: b450c55d8513b484eaef705b89e0cdde, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 7636036305753196345, guid: b450c55d8513b484eaef705b89e0cdde, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 7650145280995945160, guid: b450c55d8513b484eaef705b89e0cdde, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080157124025702742, guid: b450c55d8513b484eaef705b89e0cdde, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8332722685209263355, guid: b450c55d8513b484eaef705b89e0cdde, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646103808383574639, guid: b450c55d8513b484eaef705b89e0cdde, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b450c55d8513b484eaef705b89e0cdde, type: 3}
