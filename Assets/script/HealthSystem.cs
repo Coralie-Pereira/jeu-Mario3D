@@ -1,52 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class HealthSystem : MonoBehaviour
 {
 
     [SerializeField] Sprite fullHeart, emptyHeart;
-    [SerializeField] Image life1, life2, life3;
+    [SerializeField] TMP_Text life1, life2, life3;
 
 
     // Start is called before the first frame update
-    //void Start()
-    //{
+    void Start()
+    {
 
-    //}
+    }
 
     // Update is called once per frame
     void Update()
     {
-       /* switch (bougerMario.instance.currentHealth)
+       
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("ennemy"))
         {
-            case 3:
-                life3.sprite = fullHeart;
-                life2.sprite = fullHeart;
-                life1.sprite = fullHeart;
-            break;
+            if (string.IsNullOrEmpty(life2.text))
+            {
+                life1.text = "";
+            }
+            if (string.IsNullOrEmpty(life1.text))
+            {
+                life1.text = "GAME OVER";
+            }
+            if (string.IsNullOrEmpty(life3.text))
+            {
+                life2.text = "";
+            }
+           
+           
 
-        
-            case 2:
-                life3.sprite = emptyHeart;
-                life2.sprite = fullHeart;
-                life1.sprite = fullHeart;
-             break;
-
-        
-            case 1: 
-            life3.sprite = emptyHeart;
-            life2.sprite = emptyHeart;
-            life1.sprite = fullHeart;
-         break;
-
-            case 0:
-                life3.sprite = emptyHeart;
-                life2.sprite = emptyHeart;
-                life1.sprite = emptyHeart;
-            break;
-
-        }*/
+            life3.text = "";
+        }
     }
 }

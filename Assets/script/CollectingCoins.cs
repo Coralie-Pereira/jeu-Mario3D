@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class CollectingCoins : MonoBehaviour
 {
-
-
-
     public int coins;
-
 
 
     // Start is called before the first frame update
@@ -17,18 +13,19 @@ public class CollectingCoins : MonoBehaviour
         
     }
 
-    public void OnTriggerEnter(Collider col)
-    {
-        if (col.gameObject.tag == "coin") {
-            Debug.Log("coin collected!");
-            coins = coins + 1;
-            col.gameObject.SetActive(false);
-        }
-            
-    }
+    
     // Update is called once per frame
     void Update()
     {
         
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("coin"))
+        {
+            Destroy(collision.gameObject);
+            coins++;
+
+        }
     }
 }
