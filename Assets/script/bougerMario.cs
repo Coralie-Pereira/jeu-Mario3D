@@ -5,18 +5,18 @@ using UnityEngine;
 public class bougerMario : MonoBehaviour{
 
     public float rotationSpeed = 25.0f; // Vitesse de rotation du personnage
-    public float verticalSpeed = 24.5f; // Vitesse de déplacement verticale
-    public float jumpSpeed = 10.0f; // Vitesse de déplacement en saut
+    public float verticalSpeed = 24.5f; // Vitesse de dï¿½placement verticale
+    public float jumpSpeed = 10.0f; // Vitesse de dï¿½placement en saut
     public float jumpHeight = 10.0f; // Hauteur de saut du personnage
-    public bool isGrounded = true; // Booléen indiquant si le personnage est au sol
+    public bool isGrounded = true; // Boolï¿½en indiquant si le personnage est au sol
 
     void Update()
     {
-        // Déplacement horizontal du personnage
+        // Dï¿½placement horizontal du personnage
         float horizontalMovement = Input.GetAxis("Horizontal");
         transform.Rotate( horizontalMovement * rotationSpeed * Time.deltaTime * Vector3.up);
 
-        // Déplacement vertical du personnage
+        // Dï¿½placement vertical du personnage
         float verticalMovement = Input.GetAxis("Vertical");
         transform.Translate(Time.deltaTime * verticalMovement * verticalSpeed * Vector3.forward * -1);
 
@@ -31,12 +31,15 @@ public class bougerMario : MonoBehaviour{
 
     void OnCollisionEnter(Collision collision)
     {
-        // Vérifie si le personnage est au sol
+        // Vï¿½rifie si le personnage est au sol
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
         }
     }
+
+
+
 }
 
 
